@@ -46,5 +46,28 @@ public class Main {
         } else {
             JOptionPane.showMessageDialog(null, "Não identificado");
         }
+
+        Funcionario funcionario1 = new Funcionario();
+        funcionario1.setNome("André");
+        funcionario1.setCpf("434.3.43.53-53");
+        funcionario1.setSalario(2600);
+
+        System.out.println(funcionario1.getNome());
+        System.out.println(funcionario1.getCpf());
+        System.out.println(funcionario1.pegarBonificacao());
+
+        Gerente g1 = new Gerente();
+        g1.setNome("orlei");
+        g1.setCpf("234.4.56.93-53");
+        g1.setSalario(2600);
+
+        System.out.println(g1.getNome());
+        System.out.println(g1.getCpf());
+        System.out.println(g1.pegarBonificacao());
+
+        g1.setSenha(222);
+
+        g1.autentica(222);
+
     }
 }
