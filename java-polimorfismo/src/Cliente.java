@@ -1,6 +1,7 @@
-public class Cliente {
+public class Cliente implements Autenticavel {
     
     private String nome, cpf, profissao;
+    private int senha;
     
     public boolean podeAcessar(String cpf) {
         if (this.cpf.equals(cpf)) {
@@ -35,5 +36,21 @@ public class Cliente {
 
     public String setProfissao(String profissao) {
         return this.profissao = profissao;
+    }
+
+    @Override
+    public void setSenha(int senha) {
+        this.senha = senha;
+        
+    }
+
+    @Override
+    public boolean autentica(int senha) {
+        if(this.senha == senha) {
+            return true;
+        } else {
+            return false; 
+        }
+       
     }
 }
