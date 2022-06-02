@@ -15,10 +15,10 @@ public class Main {
         boolean foiPermitidoAcesso2 = orlei.podeAcessar(cpfDigitado);
         if (foiPermitidoAcesso || foiPermitidoAcesso2) {
 
-            Conta contaAndre = new Conta(31, 4251);
+            ContaCorrente contaAndre = new ContaCorrente(31, 4251);
             contaAndre.setTitular(andre);
             contaAndre.deposita(5000);
-            Conta contaOrlei = new Conta(31, 4251);
+            ContaCorrente contaOrlei = new ContaCorrente(31, 4251);
             contaOrlei.setTitular(orlei);
             contaAndre.deposita(5000);
             System.out.println("Contas criadas: " + Conta.getTotalDeContas());
@@ -43,7 +43,7 @@ public class Main {
             JOptionPane.showMessageDialog(null, "Não identificado");
         }
 
-        Funcionario funcionario1 = new Funcionario();
+        EditorVideo funcionario1 = new EditorVideo();
         funcionario1.setNome("André");
         funcionario1.setCpf("434.3.43.53-53");
         funcionario1.setSalario(2600);

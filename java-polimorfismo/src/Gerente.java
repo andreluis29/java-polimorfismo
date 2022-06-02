@@ -8,9 +8,11 @@ public class Gerente extends Funcionario {
         return false;
     }
 
-    public double pegarBonificação() {
-        return super.pegarBonificacao() + super.getSalario();
+    @Override
+    public double pegarBonificacao() {
+        return pegarBonificacao() + super.getSalario();
     }
+
 
     public int getSenha() {
         return this.senha;
@@ -19,4 +21,5 @@ public class Gerente extends Funcionario {
     public void setSenha(int senha) {
         this.senha = senha;
     }
+
 }
